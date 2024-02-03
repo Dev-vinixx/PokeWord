@@ -14,12 +14,23 @@ function Main() {
             </div>
           </div>
           <div className={styles.simpleNavigationAndImagePokemon}>
-            <span>sla</span>
+            <span className={styles.arrowLeft}></span>
             <img src="../public/pikachu.png" alt="" />
-            <span>lsa2</span>
+            <span className={styles.arrowRight}></span>
+            <span className={styles.wave}></span>
           </div>
         </section>
-        <section className={styles.sectionPokemonCharacteristics}></section>
+        <section className={styles.sectionPokemonCharacteristics}>
+          <div className={styles.columnOfAlign}>
+            <div>
+
+            </div>
+            <span className={styles.division}></span>
+            <div>
+
+            </div>
+          </div>
+        </section>
       </main>
     </body>
   )
