@@ -1,0 +1,57 @@
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+
+
+.body {
+ width: 100vw;
+ height: 100vh;
+ background-image: linear-gradient( to bottom, #7b7b7b,#c7c7c7, #d7d7d7);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.main {
+ width: 47vw;
+ height: 90vh;
+ background-color: black;
+ border-radius: 15px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.sectionPokemonImg {
+ background-color: #c7c7c7;
+ width: 96%;
+ height: 55%;
+}
+.sectionPokemonCharacteristics {
+ background-color: aqua;
+ width: 96%;
+ height: 40%;
+ border-radius: 0 0 7px 7px;
+}
+.containerPokemonAbout {
+ font-family: 'Syne', sans-serif;
+ width: 100%;
+ height: 6vh;
+ background-color: black;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-inline: 2vw;
+ color: #fff;
+ font-weight: 700;
+}
+.iconsInsignia {
+ width: 6vw;
+ height:5vh;
+}
+.divIdAndInsignia {
+ width: 18vw;
+ height: 7vh;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ gap: 2vw;
+ object-fit: cover;
+}
