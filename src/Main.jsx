@@ -1,6 +1,9 @@
 import styles from '../src/Main.module.css'
+import { useState } from 'react'
 
 function Main() {
+
+  const [moode, setMood] = useState("../public/unnamed.png");
 
   return (
     <body className={styles.body}>
@@ -17,9 +20,9 @@ function Main() {
             </div>
           </div>
           <div className={styles.simpleNavigationAndImagePokemon}>
-            <span className={styles.arrowLeft}></span>
-            <img src="../public/pikachu.png" alt="" />
-            <span className={styles.arrowRight}></span>
+          <span className={styles.arrowLeft} onClick={() => setMood("../public/unnamed.png")} ></span>
+            <img src={moode} alt="" />
+            <span className={styles.arrowRight} onClick={() => setMood("../public/pikachu.png")} ></span>
             <span className={styles.wave}></span>
           </div>
         </section>

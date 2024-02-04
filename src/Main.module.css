@@ -1,211 +1,449 @@
 /*-----STYLES OF BODY-----*/
 .body {
- width: 100vw;
- height: 100vh;
- background-image: linear-gradient( to bottom, #7b7b7b,#c7c7c7, #d7d7d7);
- display: flex;
- justify-content: center;
- align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #7b7b7b, #c7c7c7, #d7d7d7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 /*-----END STYLES OF BODY-----*/
 /*-----STYLES OF MAIN-----*/
 .main {
- width: 47vw;
- height: 90vh;
- background-color: black;
- border-radius: 15px;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
+  width: 47vw;
+  height: 90vh;
+  background-color: black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 /*-----END STYLES OF MAIN-----*/
 /*-----STYLES OF SECTION PREDICTED ABOUT-----*/
 .sectionPredictedAbout {
- background-color: transparent;
- width: 42vw;
- height: 49vh;
+  background-color: transparent;
+  width: 42vw;
+  height: 42vh;
 }
+
 .containerPokemonAbout {
- font-family: 'Syne', sans-serif;
- width: 100%;
- height: 6vh;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding-inline: 0vw;
- color: #fff;
- font-weight: 700;
- font-size: 1.2rem;
+  font-family: 'Syne', sans-serif;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 0vw;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  gap: 1vw;
 }
-.sharePokemon{
- margin-left: 2vw;
+
+.sharePokemon input {
+  width: 17.5vw;
+  height: 4vh;
+  border-radius: 5px;
+  border: none;
+  background-color: #2e2e2e9b;
+  outline: 0;
+  padding-left: 5px;
+  color: white;
 }
-.sharePokemon input{
- width: 17.5vw;
- height: 4vh;
- border-radius: 5px;
- border: none;
- background-color: #2e2e2e9b;
- outline: 0;
- padding-left: 1vw;
- color: white;
-}
+
 .iconsInsignia {
- width: 6vw;
- height:5vh;
+  width: 6vw;
+  height: 5vh;
 }
+
 .divIdAndInsignia {
- width: 15vw;
- height: 7vh;
- display: flex;
- justify-content: flex-end;
- align-items: center;
- gap: 2vw;
- object-fit: cover;
- font-size: 1.1rem;
+  width: 15vw;
+  height: 7vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vw;
+  object-fit: cover;
+  font-size: 1.1rem;
 }
+
 .simpleNavigationAndImagePokemon {
- padding-top: 17vh;
- width: 100%;
- height: 43vh;
- display: flex;
- justify-content: space-between;
- align-items: center;
- position: relative;
+  padding-top: 3vh;
+  width: 100%;
+  height: 34vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
+
 .simpleNavigationAndImagePokemon img {
- width: 50%; 
- height: 37vh;
- z-index: 2;
+  width: 50%;
+  height: 37vh;
+  z-index: 2;
 }
-.simpleNavigationAndImagePokemon span:not(.wave){
- position: relative;
- display: inline-block;
- width: 0;
- height: 0;
- border-style: solid;
- scale: 0.9;
- opacity: 0.8;
- transition: 0.2s;
- cursor: pointer;
- z-index: 2;
+
+.simpleNavigationAndImagePokemon span:not(.wave) {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  scale: 0.9;
+  opacity: 0.8;
+  transition: 0.2s;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .arrowRight {
- border-width: 15px 0 15px 15px;
- border-color: transparent transparent transparent rgb(255, 255, 255);
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
 }
 
 .arrowLeft {
- border-width: 15px 15px 15px 0;
- border-color: transparent rgb(255, 255, 255) transparent transparent;
+  border-width: 15px 15px 15px 0;
+  border-color: transparent rgb(255, 255, 255) transparent transparent;
 }
+
 .simpleNavigationAndImagePokemon span:hover {
- scale: 1;
- opacity: 1;
+  scale: 1;
+  opacity: 1;
 }
+
 .wave {
- position: absolute;
- width: 100%;
- top: 15vh;
- height: 38vh;
- background-color: black;
- left: 0;
- border-radius: 40%;
+  position: absolute;
+  width: 100%;
+  top: 10vh;
+  height: 33vh;
+  background-color: black;
+  left: 0;
+  border-radius: 40%;
 }
+
 /*-----END STYLES OF SECTION PREDICTED ABOUT*/
 /*-----STYLES OF SECTION POKEMON CHARACTERISTICS-----*/
 .sectionPokemonCharacteristics {
- background-color: rgb(255, 255, 255);
- width: 45vw;
- height: 39vh;
- border-radius: 20px 20px 7px 7px;
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
+  background-color: rgb(255, 255, 255);
+  width: 45vw;
+  height: 45vh;
+  border-radius: 20px 20px 7px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
 .columnOfAlign {
- width: 100%;
- height: 32vh;
- display: flex;
- justify-content: space-between;
-align-items: center;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.columnOfAlign div{
- width: 50%;
- height: 32vh;
+
+.columnOfAlign div {
+  width: 50%;
+  height: 40vh;
 }
+
 .division {
- margin-top: 4.5vh;
- height: 23vh;
- border-right: 3px solid #d2d2d2;
+  margin-top: 4.5vh;
+  height: 23vh;
+  border-right: 3px solid #d2d2d2;
 }
+
 .divAbout {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- gap: 2.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
 }
+
 .divAbout h2 {
- margin-top: 3.3vh;
- margin-bottom: 0.5vh;
- font-size: 1.3rem;
- color: #1b1b1b;
+  margin-top: 3.3vh;
+  margin-bottom: 0.5vh;
+  font-size: 1.3rem;
+  color: #1b1b1b;
 }
-.aboutWeight{
- width: 12vw;
- height: 9vh;
- font-size: 0.9rem;
- margin-bottom: 1vh; 
- display: flex;
- align-items: center;
+@media (max-height: 465px) {
+  .divAbout h2 {
+    margin-top: 2.1vh;
+  }
 }
+.aboutWeight {
+  width: 12vw;
+  height: 9vh;
+  font-size: 0.9rem;
+  margin-bottom: 1vh;
+  display: flex;
+  align-items: center;
+}
+
 .aboutWeight div {
- width: 100%;
- height: 9vh;
+  width: 100%;
+  height: 9vh;
 }
-.aboutWeight div img{
- width: 5vw;
- height: 5vh;
+
+.aboutWeight div img {
+  width: 5vw;
+  height: 5vh;
 }
-.aboutHeight{
- width: 12vw;
- height: 9vh;
- font-size: 0.9rem;
- margin-bottom: 1.5vh; 
- display: flex;
- align-items: center;
+
+.aboutHeight {
+  width: 12vw;
+  height: 9vh;
+  font-size: 0.9rem;
+  margin-bottom: 1.5vh;
+  display: flex;
+  align-items: center;
 }
+
 .aboutHeight div {
- width: 100%;
- height: 9vh;
+  width: 100%;
+  height: 9vh;
 }
-.aboutHeight div img{
- width: 5vw;
- height: 5vh;
+
+.aboutHeight div img {
+  width: 5vw;
+  height: 5vh;
 }
+
 .moreAbout {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .type h2 {
   margin-top: 3.3vh;
   margin-bottom: 0.5vh;
   font-size: 1.3rem;
   color: #1b1b1b;
 }
+
 .type p {
- margin-top: 3vh;
+  margin-top: 3vh;
+  padding: 5px;
+  background-color: #bfbfbf9e;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
 }
+
 .moves h2 {
- font-size: 1.3rem;
- color: #1b1b1b;
+  font-size: 1.3rem;
+  color: #1b1b1b;
 }
+
 .listMoves {
- white-space: nowrap;
- font-size: 0.9rem;
- margin-top: 2vh;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  margin-top: 2vh;
+}
+
+@media (max-width: 890px) {
+  .sharePokemon input {
+    font-size: 0.8rem;
+    padding-left: 2px;
+  }
+}
+
+@media (max-width: 815px) {
+  .sharePokemon input {
+    font-size: 0.7rem;
+    padding-left: 0.5vw;
+  }
+
+  .containerPokemonAbout {
+    font-size: 1.1rem;
+  }
+
+  .divIdAndInsignia {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 724px) {
+  .containerPokemonAbout {
+    font-size: 1rem;
+  }
+
+  .divIdAndInsignia {
+    font-size: 0.9rem;
+  }
+
+  .main {
+    width: 50vw;
+    height: 90vh;
+    background-color: black;
+  }
+}
+
+@media (max-width: 710px) {
+  .sharePokemon input {
+    font-size: 0.6rem;
+    padding-left: 0.5vw;
+  }
+}
+@media (max-width: 650px) {
+  .listMoves{
+    font-size: 0.8rem;
+  }
+   .type{
+    font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 610px) {
+  .aboutWeight {
+    font-size: 0.8rem;
+  }
+  .aboutHeight {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 650px) {
+  .listMoves{
+    font-size: 0.7rem;
+  }
+   .type{
+    font-size: 0.7rem;
+   }
+}
+@media (max-width: 628px) {
+  .aboutWeight {
+    font-size: 0.7rem;
+  }
+  .aboutHeight {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 608px) {
+  .sharePokemon input {
+    font-size: 0.5rem;
+    padding-left: 0.5vw;
+  }
+  .containerPokemonAbout {
+    font-size: 0.9rem;
+  }
+
+  .divIdAndInsignia {
+    font-size: 0.8rem;
+  }
+  .divIdAndInsignia {
+    gap: 1vw;
+  }
+}
+@media (max-width: 564px) {
+  .main {
+    width: 52vw;
+    height: 90vh;
+    background-color: black;
+  }
+  .containerPokemonAbout {
+    font-size: 0.8rem;
+  }
+
+  .divIdAndInsignia {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 512px) {
+  .listMoves{
+    font-size: 0.6rem;
+  }
+   .type{
+    font-size: 0.6rem;
+   }
+}
+@media (max-width: 478px) {
+  .aboutWeight {
+    font-size: 0.6rem;
+  }
+  .aboutHeight {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 436px) {
+  .containerPokemonAbout {
+    font-size: 0.7rem;
+  }
+
+  .divIdAndInsignia {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .moves h2{
+    font-size: 1.1rem;
+  }
+   .type h2{
+    font-size: 1.1rem;
+   }
+   .divAbout h2 {
+    font-size: 1.1rem;
+   }
+}
+@media (max-width: 418px) {
+  .aboutWeight {
+    font-size: 0.5rem;
+  }
+  .aboutHeight {
+    font-size: 0.5rem;
+  }
+  .listMoves{
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 374px) {
+  
+  .containerPokemonAbout {
+    font-size: 0.5rem;
+  }
+
+  .divIdAndInsignia {
+    font-size: 0.4rem;
+  }
+}
+@media (max-width: 508px) {
+  .sharePokemon input {
+    font-size: 0.4rem;
+    padding-left: 0.5vw;
+  }
+}
+
+@media (max-width: 410px) {
+  .sharePokemon input {
+    font-size: 0.3rem;
+    padding-left: 0.5vw;
+    height: 3vh;
+  }
+}
+
+@media (max-width: 310px) {
+  .sharePokemon input {
+    font-size: 0.2rem;
+    padding-left: 0.5vw;
+    height: 2vh;
+  }
+}
+
+@media (max-width: 210px) {
+  .sharePokemon input {
+    font-size: 0.1rem;
+    padding-left: 0.5vw;
+  }
+}
+
+@media (max-width: 104px) {
+  .sharePokemon input {
+    font-size: 0.099999rem;
+    padding-left: 0.5vw;
+  }
 }
