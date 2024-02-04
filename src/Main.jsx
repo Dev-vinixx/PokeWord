@@ -8,6 +8,9 @@ function Main() {
         <section className={styles.sectionPredictedAbout}>
           <div className={styles.containerPokemonAbout}>
             <p>pikachu</p>
+            <div className={styles.sharePokemon}>
+              <input type="text" placeholder='which is name pokemon'/>
+            </div>
             <div className={styles.divIdAndInsignia}>
               <span>#160</span>
               <img className={styles.iconsInsignia} src="../public/unnamed.png" alt="" />
@@ -40,8 +43,19 @@ function Main() {
               </div>
             </div>
             <span className={styles.division}></span>
-            <div>
-
+            <div className={styles.moreAbout}>
+              <div className={styles.type}>
+              <h2>Types</h2>
+              <p>Eletrict</p>
+              </div>
+              <div className={styles.moves}>
+              <h2>moves</h2>
+              <ul className={styles.listMoves}>
+                <li>Rock head</li>
+                <li>Lightning Rod</li>
+                <li>Batle Armor</li>
+              </ul>
+              </div>
             </div>
           </div>
         </section>
