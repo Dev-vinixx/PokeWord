@@ -22,8 +22,22 @@ function Main() {
         </section>
         <section className={styles.sectionPokemonCharacteristics}>
           <div className={styles.columnOfAlign}>
-            <div>
-
+            <div className={styles.divAbout}>
+              <h2>about</h2>
+              <div className={styles.aboutWeight}>
+                <div>
+                  <img src="../public/weight.svg" alt="" />
+                  <p>weight</p>
+                </div>
+                <p>66,7kg</p>
+              </div>
+              <div className={styles.aboutHeight}>
+                <div>
+                  <img src="../public/height.svg" alt="" />
+                  <p>height</p>
+                </div>
+                <p>66,7M</p>
+              </div>
             </div>
             <span className={styles.division}></span>
             <div>
