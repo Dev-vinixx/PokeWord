@@ -1,9 +1,40 @@
+import axios from 'axios';
 import styles from '../src/Main.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Main() {
 
-  const [moode, setMood] = useState("../public/unnamed.png");
+  
+  const [pokemonIdentifier, setPokemonIdentifier] = useState('1'); 
+  const [imagePokemon, setImagePokemon] = useState(0);
+  const defaultImage = '../public/pokebol.png';
+
+
+  const getImagePokemon = async (identifier) => {
+    try {
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${identifier}`);
+      return response.data.sprites.front_default;
+    } catch (error) {
+      console.log('erro');
+
+      return defaultImage;
+    }
+  };
+
+  useEffect(() => {
+    getImagePokemon(pokemonIdentifier).then(image => setImagePokemon(image));
+  }, [pokemonIdentifier]);
+
+  const handleArrowClick = (direction) => {
+    if (!isNaN(pokemonIdentifier)) {
+      let newId = parseInt(pokemonIdentifier) + direction;
+      newId = Math.max(1, newId); // garantir que o ID não seja menor que 1
+      newId = Math.min(1025, newId); // garantir que o ID não seja maior que 1025
+      setPokemonIdentifier(newId.toString());
+    } else {
+      setPokemonIdentifier('1');
+    }
+  };
 
   return (
     <body className={styles.body}>
@@ -12,7 +43,7 @@ function Main() {
           <div className={styles.containerPokemonAbout}>
             <p>pikachu</p>
             <div className={styles.sharePokemon}>
-              <input type="text" placeholder='which is name pokemon'/>
+              <input type="text" placeholder='which is name pokemon' onChange={(e) => setPokemonIdentifier(e.target.value)} />
             </div>
             <div className={styles.divIdAndInsignia}>
               <span>#160</span>
@@ -20,9 +51,9 @@ function Main() {
             </div>
           </div>
           <div className={styles.simpleNavigationAndImagePokemon}>
-          <span className={styles.arrowLeft} onClick={() => setMood("../public/unnamed.png")} ></span>
-            <img src={moode} alt="" />
-            <span className={styles.arrowRight} onClick={() => setMood("../public/pikachu.png")} ></span>
+          <span className={styles.arrowLeft} onClick={() => handleArrowClick(-1)} ></span>
+            {imagePokemon === 0 ? <img src={defaultImage} alt="" /> : <img src={imagePokemon} alt="" /> }
+            <span className={styles.arrowRight} onClick={() => handleArrowClick(+1)} ></span>
             <span className={styles.wave}></span>
           </div>
         </section>
