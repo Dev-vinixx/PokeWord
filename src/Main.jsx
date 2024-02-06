@@ -8,7 +8,7 @@ function Main() {
   const [pokemonIdentifier, setPokemonIdentifier] = useState('1');
   const [pokemonData, setPokemonData] = useState({});
 
-  const defaultImage = '../public/pokebol.png'; // substitua por sua imagem padrão
+  const defaultImage = '../public/pokebol.png'; 
 
   const getPokemonData = async (identifier) => {
     try {
@@ -33,8 +33,8 @@ function Main() {
   const handleArrowClick = (direction) => {
     if (!isNaN(pokemonIdentifier)) {
       let newId = parseInt(pokemonIdentifier) + direction;
-      newId = Math.max(1, newId); // garantir que o ID não seja menor que 1
-      newId = Math.min(1025, newId); // garantir que o ID não seja maior que 1025
+      newId = Math.max(1, newId); 
+      newId = Math.min(1025, newId);
       setPokemonIdentifier(newId.toString());
     } else {
       setPokemonIdentifier('1');
