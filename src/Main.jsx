@@ -4,25 +4,30 @@ import { useEffect, useState } from 'react'
 
 function Main() {
 
-  
-  const [pokemonIdentifier, setPokemonIdentifier] = useState('1'); 
-  const [imagePokemon, setImagePokemon] = useState(0);
-  const defaultImage = '../public/pokebol.png';
 
+  const [pokemonIdentifier, setPokemonIdentifier] = useState('1');
+  const [pokemonData, setPokemonData] = useState({});
 
-  const getImagePokemon = async (identifier) => {
+  const defaultImage = '../public/pokebol.png'; // substitua por sua imagem padrão
+
+  const getPokemonData = async (identifier) => {
     try {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${identifier}`);
-      return response.data.sprites.front_default;
+      return response.data;
     } catch (error) {
       console.log('erro');
-
-      return defaultImage;
+      return {
+        sprites: { front_default: defaultImage },
+        weight: '0',
+        height: '0',
+        types: [],
+        moves: []
+      };
     }
   };
 
   useEffect(() => {
-    getImagePokemon(pokemonIdentifier).then(image => setImagePokemon(image));
+    getPokemonData(pokemonIdentifier).then(data => setPokemonData(data));
   }, [pokemonIdentifier]);
 
   const handleArrowClick = (direction) => {
@@ -41,18 +46,18 @@ function Main() {
       <main className={styles.main}>
         <section className={styles.sectionPredictedAbout}>
           <div className={styles.containerPokemonAbout}>
-            <p>pikachu</p>
+            <p>{pokemonData.name}</p>
             <div className={styles.sharePokemon}>
               <input type="text" placeholder='which is name pokemon' onChange={(e) => setPokemonIdentifier(e.target.value)} />
             </div>
             <div className={styles.divIdAndInsignia}>
-              <span>#160</span>
+              <span>#{pokemonData.id}</span>
               <img className={styles.iconsInsignia} src="../public/unnamed.png" alt="" />
             </div>
           </div>
           <div className={styles.simpleNavigationAndImagePokemon}>
-          <span className={styles.arrowLeft} onClick={() => handleArrowClick(-1)} ></span>
-            {imagePokemon === 0 ? <img src={defaultImage} alt="" /> : <img src={imagePokemon} alt="" /> }
+            <span className={styles.arrowLeft} onClick={() => handleArrowClick(-1)} ></span>
+            {pokemonData.sprites?.front_default ? <img src={pokemonData.sprites.front_default} alt="" /> : <img src={defaultImage} alt="" />}
             <span className={styles.arrowRight} onClick={() => handleArrowClick(+1)} ></span>
             <span className={styles.wave}></span>
           </div>
@@ -66,29 +71,29 @@ function Main() {
                   <img src="../public/weight.svg" alt="" />
                   <p>weight</p>
                 </div>
-                <p>66,7kg</p>
+                <p>{pokemonData.weight}Kg</p>
               </div>
               <div className={styles.aboutHeight}>
                 <div>
                   <img src="../public/height.svg" alt="" />
                   <p>height</p>
                 </div>
-                <p>66,7M</p>
+                <p>{pokemonData.height}M</p>
               </div>
             </div>
             <span className={styles.division}></span>
             <div className={styles.moreAbout}>
               <div className={styles.type}>
-              <h2>Types</h2>
-              <p>Eletrict</p>
+                <h2>Types</h2>
+                <p>{pokemonData.types?.map(type => type.type.name).join(', ')}</p>
               </div>
               <div className={styles.moves}>
-              <h2>moves</h2>
-              <ul className={styles.listMoves}>
-                <li>Rock head</li>
-                <li>Lightning Rod</li>
-                <li>Batle Armor</li>
-              </ul>
+                <h2>moves</h2>
+                <ul className={styles.listMoves}>
+                  {pokemonData.moves?.slice(0, 3).map((move, index) => (
+                    <li key={index}>{move.move.name}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

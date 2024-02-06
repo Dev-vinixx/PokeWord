@@ -13,7 +13,7 @@
 .main {
   width: 47vw;
   height: 90vh;
-  background-color: black;
+  background: #0d0d0d;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@
   padding-inline: 0vw;
   color: #fff;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   gap: 1vw;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .simpleNavigationAndImagePokemon {
-  padding-top: 3vh;
+  padding-top: 12vh;
   width: 100%;
   height: 34vh;
   display: flex;
@@ -119,7 +119,7 @@
   width: 100%;
   top: 10vh;
   height: 33vh;
-  background-color: black;
+  background: radial-gradient(#212121, #0d0d0d, #0d0d0d);
   left: 0;
   border-radius: 40%;
 }
@@ -127,7 +127,7 @@
 /*-----END STYLES OF SECTION PREDICTED ABOUT*/
 /*-----STYLES OF SECTION POKEMON CHARACTERISTICS-----*/
 .sectionPokemonCharacteristics {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 252, 241);
   width: 45vw;
   height: 45vh;
   border-radius: 20px 20px 7px 7px;
@@ -152,7 +152,7 @@
 .division {
   margin-top: 4.5vh;
   height: 23vh;
-  border-right: 3px solid #d2d2d2;
+  border-right: 3px solid #d2d2d2be;
 }
 
 .divAbout {
@@ -169,11 +169,13 @@
   font-size: 1.3rem;
   color: #1b1b1b;
 }
+
 @media (max-height: 465px) {
   .divAbout h2 {
     margin-top: 2.1vh;
   }
 }
+
 .aboutWeight {
   width: 12vw;
   height: 9vh;
@@ -228,11 +230,12 @@
 .type p {
   margin-top: 3vh;
   padding: 5px;
-  background-color: #bfbfbf9e;
+  background-color: #dbdbdb92;
   align-items: center;
   display: flex;
+  flex-direction: column;
   border-radius: 10px;
-  justify-content: center;
+  text-align: center;
 }
 
 .moves h2 {
@@ -280,7 +283,6 @@
   .main {
     width: 50vw;
     height: 90vh;
-    background-color: black;
   }
 }
 
@@ -290,44 +292,53 @@
     padding-left: 0.5vw;
   }
 }
+
 @media (max-width: 650px) {
-  .listMoves{
+  .listMoves {
     font-size: 0.8rem;
   }
-   .type{
+
+  .type {
     font-size: 0.8rem;
-   }
+  }
 }
 
 @media (max-width: 610px) {
   .aboutWeight {
     font-size: 0.8rem;
   }
+
   .aboutHeight {
     font-size: 0.8rem;
   }
 }
+
 @media (max-width: 650px) {
-  .listMoves{
+  .listMoves {
     font-size: 0.7rem;
   }
-   .type{
+
+  .type {
     font-size: 0.7rem;
-   }
+  }
 }
+
 @media (max-width: 628px) {
   .aboutWeight {
     font-size: 0.7rem;
   }
+
   .aboutHeight {
     font-size: 0.7rem;
   }
 }
+
 @media (max-width: 608px) {
   .sharePokemon input {
     font-size: 0.5rem;
     padding-left: 0.5vw;
   }
+
   .containerPokemonAbout {
     font-size: 0.9rem;
   }
@@ -335,16 +346,18 @@
   .divIdAndInsignia {
     font-size: 0.8rem;
   }
+
   .divIdAndInsignia {
     gap: 1vw;
   }
 }
+
 @media (max-width: 564px) {
   .main {
     width: 52vw;
     height: 90vh;
-    background-color: black;
   }
+
   .containerPokemonAbout {
     font-size: 0.8rem;
   }
@@ -353,18 +366,22 @@
     font-size: 0.7rem;
   }
 }
+
 @media (max-width: 512px) {
-  .listMoves{
+  .listMoves {
     font-size: 0.6rem;
   }
-   .type{
+
+  .type {
     font-size: 0.6rem;
-   }
+  }
 }
+
 @media (max-width: 478px) {
   .aboutWeight {
     font-size: 0.6rem;
   }
+
   .aboutHeight {
     font-size: 0.6rem;
   }
@@ -379,30 +396,37 @@
     font-size: 0.5rem;
   }
 }
+
 @media (max-width: 450px) {
-  .moves h2{
+  .moves h2 {
     font-size: 1.1rem;
   }
-   .type h2{
+
+  .type h2 {
     font-size: 1.1rem;
-   }
-   .divAbout h2 {
+  }
+
+  .divAbout h2 {
     font-size: 1.1rem;
-   }
+  }
 }
+
 @media (max-width: 418px) {
   .aboutWeight {
     font-size: 0.5rem;
   }
+
   .aboutHeight {
     font-size: 0.5rem;
   }
-  .listMoves{
+
+  .listMoves {
     font-size: 0.5rem;
   }
 }
+
 @media (max-width: 374px) {
-  
+
   .containerPokemonAbout {
     font-size: 0.5rem;
   }
@@ -411,6 +435,7 @@
     font-size: 0.4rem;
   }
 }
+
 @media (max-width: 508px) {
   .sharePokemon input {
     font-size: 0.4rem;
@@ -426,11 +451,65 @@
   }
 }
 
+@media (max-width: 378px) and (max-height: 200px) {
+  .moves h2 {
+    font-size: 1rem;
+  }
+
+  .type h2 {
+    font-size: 1rem;
+  }
+
+  .listMoves {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 358px) {
+  .aboutWeight {
+    font-size: 0.4rem;
+  }
+
+  .aboutHeight {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 338px) {
+  .moves h2 {
+    font-size: 0.9rem;
+  }
+
+  .type h2 {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 310px) {
   .sharePokemon input {
     font-size: 0.2rem;
     padding-left: 0.5vw;
     height: 2vh;
+  }
+}
+
+@media (max-width: 308px) {
+  .moves h2 {
+    font-size: 0.8rem;
+  }
+
+  .type h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .aboutWeight {
+    font-size: 0.3rem;
+  }
+
+  .aboutHeight {
+    font-size: 0.3rem;
   }
 }
 
